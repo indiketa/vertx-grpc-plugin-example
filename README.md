@@ -37,6 +37,6 @@ After installing the plugin, add a [custom protoc plugin configuration section](
     </protocPlugin>
 </protocPlugins>
 ```
-This will use the standard grpc-java generator and then call the vertx-grpc-plugin to generate vertx service stubs and base implementation along with your gRPC service stubs.
+This will use the standard grpc-java generator and then call the vertx-grpc-plugin to generate vertx service stubs and base implementation along with your gRPC service stubs. See this project `pom.xml` for a complete example.
   
-* To implement a service using an VertxGrpc service subclass `[Name]VertxGrpc.[Name]VertxImplBase` and override the   methods as shown in this example repository in `Client.java` and `Server.java` classes.
+* To implement a vertx grpc service subclass `[Name]VertxGrpc.[Name]VertxImplBase` and override the   methods as shown in this example repository in `Client.java` and `Server.java` classes.
