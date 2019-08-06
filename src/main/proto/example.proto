@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.vertx.grpc.plugin.example";
+option java_outer_classname = "Example";
+package com.adparts.adnetwork.grpc;
+
+
+service ExampleService {
+    rpc unaryUnary  (ExampleRequest)        returns (ExampleResponse)           {}
+    rpc unaryMany   (ExampleRequest)        returns (stream ExampleResponse)    {}
+    rpc manyUnary   (stream ExampleRequest) returns (ExampleResponse)           {}
+    rpc manyMany    (stream ExampleRequest) returns (stream ExampleResponse)    {}
+}
+
+message ExampleRequest {
+    string name = 1;
+}
+
+message ExampleResponse {
+    string greeting = 1;
+}
