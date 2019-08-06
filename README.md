@@ -1,5 +1,3 @@
-# vertx-grpc-plugin-example
-
 Overview
 ========
 This project is an example on how to use
